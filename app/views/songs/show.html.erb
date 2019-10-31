@@ -1,0 +1,5 @@
+<h1><%= @song.title %></h1>
+
+<h3>Category: <%= link_to @song.artist_name, artist_path(@song.artist) if @song.artist%></h3>
+
+<!-- Also note that we added the if @song.artist conditional to ensure that the view doesn't try to call @song.artist.name if the song has not been associated with an artist.-->
